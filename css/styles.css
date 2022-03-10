@@ -1,27 +1,5 @@
-/* Général */
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body, h1 {
+  color: #4c9be1;
 }
 
-body
-{
-    font-family: 'Roboto',"sans-serif";
-}
-
-a, li
-{
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-}
-
-h2  
-{
-    font-family: 'shrikland', "sans-serif";
-}
-
-
-
+/*# sourceMappingURL=styles.css.map */
