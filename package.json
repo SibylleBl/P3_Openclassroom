@@ -1,0 +1,22 @@
+{
+  "name": "p3_blondeau",
+  "version": "1.0.0",
+  "description": "projetsib3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SibylleBl/P3_Openclassroom.git"
+  },
+  "author": "sib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SibylleBl/P3_Openclassroom/issues"
+  },
+  "homepage": "https://github.com/SibylleBl/P3_Openclassroom#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
