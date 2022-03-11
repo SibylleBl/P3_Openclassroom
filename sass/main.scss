@@ -14,11 +14,14 @@
 @import "./pages/project";
 
 
-body, h1 {
-
-    color: $main-color;
-
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
+
 
 
 
