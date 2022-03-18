@@ -13,362 +13,313 @@
 @import "./pages/about";
 @import "./pages/project";
 
-
 body {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    list-style-type: none;
+  }
+
+  p {
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    ul {
-        list-style-type: none;
-        
-    }
+  }
 
-    p {
-        margin: 0;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    h4, h5 {
-        margin: 0;
-    }
+  h4,
+  h5 {
+    margin: 0;
+  }
 }
 
 .entete {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    padding: 2% 0 15% 0;
-    background-color: $background-light;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  padding: 2% 0 15% 0;
+  background-color: $background-light;
 
-    .logo_header {
+  .logo_header {
+    padding: 3%;
 
-        padding: 3%;
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
 
-        img {
-            width: 50%;
-            height: auto;
-        }
+  .navigation {
+    .localisation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: darken($color: $background-light, $amount: 5%);
+      padding: 5% 0;
+
+      .icone {
+        margin-right: 2%;
+      }
     }
 
-    .navigation {
-
-        .localisation {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: darken($color: $background-light, $amount: 5%);
-            padding: 5% 0;
-
-            .icone {
-                margin-right: 2%;
-            }
+    .explorer {
+      .texte_explorer {
+        h1 {
+          font-size: 150%;
+          font-weight: 600;
+          padding: 0 15%;
         }
-
-        .explorer {
-
-            .texte_explorer {
-                h1 {
-                    font-size: 150%;
-                    font-weight: 600;
-                    padding: 0 15%;
-                }
-                p {
-                    padding: 0 5% 10% 5%;
-                }
-
-            }
-
-            a {
-            background: linear-gradient(to bottom right, $second-color, $first-color);
-            padding: 3%;
-            border-radius: 30px;
-            color: white;
-            box-shadow: 3px 5px 10px 0px $grey-color;
-            }
+        p {
+          padding: 0 5% 10% 5%;
         }
+      }
+
+      a {
+        @include button;
+      }
     }
-
+  }
 }
 
 header {
+  background-color: $background-light;
 
-    background-color: $background-light;
-    
-    img {
-        width: 100%;
-        
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .elements_header {
-    display: flex;
-    width: auto;
-    padding: 5%;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  width: auto;
+  padding: 5%;
+  align-items: center;
+  justify-content: space-around;
 
-    .element_header {
+  .element_header {
+    padding-right: 3%;
 
-        padding-right: 3%;
-
-        a {
-            i {
-                font-size: 150%;
-            }
-        }
-
-
+    a {
+      i {
+        font-size: 150%;
+      }
     }
+  }
 
-    .logo_header {
+  .logo_header {
+    padding: 2% 0 0 16%;
 
-        padding: 2% 0 0 16%;
-  
-        img {
-            width: 65%;
-            height: auto;
-        }
+    img {
+      width: 65%;
+      height: auto;
     }
-
+  }
 }
 
-
 nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 7% 0;
+
+  h1 {
+    @include titles;
+  }
+
+  div.buttons_nav {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 7% 0;
+    align-items: center;
 
-    h1 {
-        text-align: start;
-        margin-left: 5%;
-        font-size: 150%;
-        margin-bottom: 7%;
+    .button_nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 3%;
+
+      p {
+        position: absolute;
+        margin-left: 4%;
+        color: white;
+        background-color: $first-color;
+        padding: 1% 2%;
+        border-radius: 30px;
+      }
     }
 
-    div.buttons_nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    button {
+      width: 100%;
+      padding: 7% 0;
+      margin: 0 6%;
+      border-radius: 25px;
+      text-align: start;
+      background-color: $background-light;
+      font-weight: bold;
+      border: none;
+      @include shadow;
 
-        .button_nav {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            margin-bottom: 3%;
-
-            p {
-                position: absolute;
-                margin-left: 4%;
-                color: white;
-                background-color: $first-color;
-                padding: 1% 2%;
-                border-radius: 30px;
-            }
-        }
-
-
-        button {
-            width: 100%;
-            padding: 7% 0;
-            margin: 0 6%;
-            border-radius: 25px;
-            text-align: start;
-            background-color: $background-light;
-            font-weight: bold;
-            border: none;
-            box-shadow: 4px 7px 10px 0px $grey-color;
-
-            i {
-                padding: 0 10% 0 15%;
-                color: $grey-color;
-            }
-        }
+      i {
+        padding: 0 10% 0 15%;
+        color: $grey-color;
+      }
     }
-
+  }
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 section.home {
-    width: 100%;
-    background-color: $background-light;
-    padding: 7% 0;
+  width: 100%;
+  background-color: $background-light;
+  padding: 7% 0;
 
-    h1 {
-        margin-left: 5%;
-        font-size: 150%;
-    }
+  h1 {
+    @include titles;
+  }
 }
 
 section.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+  background-color: $background-light;
+
+  .menus_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .menu_title {
+      font-family: "Shrikhand";
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10%;
+
+      h3 {
+        font-size: 170%;
+      }
+    }
+  }
+
+  .pastille_all {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0 0;
-    background-color: $background-light;
+    padding: 5% 0;
 
-    .menus_title {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        .menu_title {
-            font-family: 'Shrikhand'; 
-            display: flex;
-            justify-content: space-between;
-            padding-right: 10%;
-            
-
-            h3 {
-                font-size: 170%;
-            }
-        }
+    .pastille {
+      display: flex;
+      justify-content: space-between;
+      padding: 5%;
+      margin: 2% 5%;
+      background-color: white;
+      border-radius: 15px;
+      @include shadow;
+      h5 {
+        font-size: 105%;
+      }
     }
+  }
 
-    .pastille_all {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 5% 0;
+  .commander {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin-bottom: 5%;
 
-        .pastille {
-            display: flex;
-            justify-content: space-between;
-            padding: 5%;
-            margin: 2% 5%;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 4px 7px 10px 0px $grey-color;
-
-            h5 {
-                font-size: 105%;
-            }
-        }
-    
+    input {
+      @include button;
+      border: none;
     }
-
-    .commander {
-
-        display: flex;
-        width: auto;
-        justify-content: center;
-        margin-bottom: 5%;
-    
-     input {
-        
-        background: linear-gradient(to bottom right, $second-color, $first-color);
-            padding: 3% 10%;
-            border-radius: 30px;
-            color: white;
-            box-shadow: 3px 5px 10px 0px $grey-color;
-            border: none;
-     }
-    }
-    
+  }
 }
 .restaurants {
-    
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 599px) {
+    flex-direction: row;
+  }
+
+  .restaurant figure {
     display: flex;
     flex-direction: column;
-    @media (min-width: 599px) {
-        flex-direction: row;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    margin: 3%;
+    @include shadow;
+
+    h2 {
+      margin: 0;
     }
 
-    .restaurant figure {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-        border-radius: 15px;
-        margin: 3%;
-        box-shadow: 4px 7px 10px 0px $grey-color;
+    .new {
+      position: absolute;
+      background-color: $third-color;
+      color: darken($color: $third-color, $amount: 50%);
+      padding: 2%;
+      margin: 3% 0 3% 72%;
+    }
 
-        h2 {
-            margin:0;
-        }
+    .restaurant_text {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2% 5%;
+    }
 
-        .new {
-
-            position: absolute;
-            background-color: $third-color;
-            color: darken($color: $third-color, $amount: 50%);
-            padding: 2%;
-            margin: 3% 0 3% 72%;
-        }
-
-        .restaurant_text {
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2% 5%;
-        }
-
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            overflow: hidden;
-            border-radius: 15px 15px 0 0;
-        }
-    }  
-
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 15px 15px 0 0;
+    }
+  }
 }
 
 footer {
-    width: 100%;
+  width: 100%;
 
-    background-color: rgb(39, 38, 38);
-    
+  background-color: rgb(39, 38, 38);
 
-    .logo_footer {
+  .logo_footer {
+    font-family: "Shrikhand";
+    color: white;
+    font-size: 110%;
+    padding: 8% 5% 0% 10%;
+  }
 
-        font-family: 'Shrikhand';
-        color: white;
-        font-size: 110%;
-        padding: 8% 5% 0% 10%;
-    }
-
-    li {
-    
+  li {
     padding: 1% 0;
-        i {
-            padding-right: 2%;
-        }
-        i.fa-handshake-angle {
-            font-size: 70%;
-        }
-        a {
-            color: white;
-        }
+    i {
+      padding-right: 2%;
     }
+    i.fa-handshake-angle {
+      font-size: 70%;
+    }
+    a {
+      color: white;
+    }
+  }
 }
-
-
-
-
-
-
-
