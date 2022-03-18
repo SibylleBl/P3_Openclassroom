@@ -19,6 +19,9 @@ body a {
   text-decoration: none;
   color: black;
 }
+body h4, body h5 {
+  margin: 0;
+}
 
 .entete {
   display: flex;
@@ -61,6 +64,34 @@ body a {
   border-radius: 30px;
   color: white;
   box-shadow: 3px 5px 10px 0px #c7c3c3;
+}
+
+header {
+  background-color: #f8f6f6;
+}
+header img {
+  width: 100%;
+}
+
+.elements_header {
+  display: flex;
+  width: auto;
+  padding: 5%;
+  align-items: center;
+  justify-content: space-around;
+}
+.elements_header .element_header {
+  padding-right: 3%;
+}
+.elements_header .element_header a i {
+  font-size: 150%;
+}
+.elements_header .logo_header {
+  padding: 2% 0 0 16%;
+}
+.elements_header .logo_header img {
+  width: 65%;
+  height: auto;
 }
 
 nav {
@@ -110,14 +141,73 @@ nav div.buttons_nav button i {
   color: #c7c3c3;
 }
 
-section {
+main {
+  width: 100%;
+}
+
+section.home {
   width: 100%;
   background-color: #f8f6f6;
   padding: 7% 0;
 }
-section h1 {
+section.home h1 {
   margin-left: 5%;
   font-size: 150%;
+}
+
+section.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+  background-color: #f8f6f6;
+}
+section.menu .menus_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.menu .menus_title .menu_title {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
+}
+section.menu .menus_title .menu_title h3 {
+  font-size: 170%;
+}
+section.menu .pastille_all {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5% 0;
+}
+section.menu .pastille_all .pastille {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  margin: 2% 5%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 4px 7px 10px 0px #c7c3c3;
+}
+section.menu .pastille_all .pastille h5 {
+  font-size: 105%;
+}
+section.menu .commander {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+section.menu .commander input {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 3% 10%;
+  border-radius: 30px;
+  color: white;
+  box-shadow: 3px 5px 10px 0px #c7c3c3;
+  border: none;
 }
 
 .restaurants {

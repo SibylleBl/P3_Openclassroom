@@ -38,6 +38,10 @@ body {
         text-decoration: none;
         color: black;
     }
+
+    h4, h5 {
+        margin: 0;
+    }
 }
 
 .entete {
@@ -100,6 +104,48 @@ body {
 
 }
 
+header {
+
+    background-color: $background-light;
+    
+    img {
+        width: 100%;
+        
+    }
+}
+
+.elements_header {
+    display: flex;
+    width: auto;
+    padding: 5%;
+    align-items: center;
+    justify-content: space-around;
+
+    .element_header {
+
+        padding-right: 3%;
+
+        a {
+            i {
+                font-size: 150%;
+            }
+        }
+
+
+    }
+
+    .logo_header {
+
+        padding: 2% 0 0 16%;
+  
+        img {
+            width: 65%;
+            height: auto;
+        }
+    }
+
+}
+
 
 nav {
     display: flex;
@@ -156,7 +202,11 @@ nav {
 
 }
 
-section {
+main {
+    width: 100%;
+}
+
+section.home {
     width: 100%;
     background-color: $background-light;
     padding: 7% 0;
@@ -165,6 +215,76 @@ section {
         margin-left: 5%;
         font-size: 150%;
     }
+}
+
+section.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    background-color: $background-light;
+
+    .menus_title {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .menu_title {
+            font-family: 'Shrikhand'; 
+            display: flex;
+            justify-content: space-between;
+            padding-right: 10%;
+            
+
+            h3 {
+                font-size: 170%;
+            }
+        }
+    }
+
+    .pastille_all {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5% 0;
+
+        .pastille {
+            display: flex;
+            justify-content: space-between;
+            padding: 5%;
+            margin: 2% 5%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 4px 7px 10px 0px $grey-color;
+
+            h5 {
+                font-size: 105%;
+            }
+        }
+    
+    }
+
+    .commander {
+
+        display: flex;
+        width: auto;
+        justify-content: center;
+        margin-bottom: 5%;
+    
+     input {
+        
+        background: linear-gradient(to bottom right, $second-color, $first-color);
+            padding: 3% 10%;
+            border-radius: 30px;
+            color: white;
+            box-shadow: 3px 5px 10px 0px $grey-color;
+            border: none;
+     }
+    }
+    
 }
 .restaurants {
     

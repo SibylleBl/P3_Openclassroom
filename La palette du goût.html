@@ -11,56 +11,137 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <header>
-            <div class="elements_header">
-                <div class="element_header">
-                    <a href="./Index.html">flèche</a>
-                </div>
-                <div class="element_header">
-                    <img src="Images/logo/ohmyfood.png" alt="Logo Ohmyfood!"/>
-                </div>
+      <header>
+          <div class="elements_header">
+              <div class="element_header">
+                  <a href="./Index.html"><i class="fa-solid fa-arrow-left"></i></a>
+              </div>
+              <div class="logo_header">
+                  <img src="Images/logo/ohmyfood.png" alt="Logo Ohmyfood!"/>
+              </div>
+          </div>
+          <img src="./Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="alafrancaise"/>
+      </header>
 
-            </div>
-        </header>
+      <main>
+          <section class="menu">
+              <div class="menus_title">
+                  <div class="menu_title">
+                      <h3>La palette du goût</h3>
+                  </div>
+                  <button class="heart"><i class="fa-solid fa-heart"></i></button>
+              </div>
+              <form method="post" action="blabla.php">
+                  <div class="pastille_all">
+                          <div class="pastille_title">
+                              <h4>ENTREES</h4>
+                          </div>
+                          <div class="pastille">
+                              <label for="fric_esc">
+                                  <h5>Fricassée d'escargot</h5>
+                                  <p>Aux piment d'espelette <span>25€</span></p>
+                              </label>
+                              <input type="checkbox" name="fric_esc" id="fric_esc"/>
+                          </div>
+                          <div class="pastille">
+                              <label for="foie_gras">
+                                  <h5>Foie gras de canard mi-cuit</h5>
+                                  <p>Et ses coupeaux de truffe noire<span>35€</span></p>
+                              </label>
+                              <input type="checkbox" name="foie_gras" id="foie_gras"/>
+                          </div>
+                          <div class="pastille">
+                              <label for="oeuf_plat">
+                                  <h5>Oeuf au plat</h5>
+                                  <p>Assaisonné à la truffe sur lit de...<span>20€</span></p>
+                              </label>
+                              <input type="checkbox" name="oeuf_plat" id="oeuf_plat"/>
+                          </div>
+                      </div>
 
-        <main>
-            <div class="menu_title">
-                <h3>La palette du goût</h3>
-                <button class="heart">coeur</button>
-            </div>
-            <section class="entrées">
 
-            </section>
+                  <div class="pastille_all">
+                      <div class="pastille_title">
+                          <h4>PLATS</h4>
+                          </div>
+                          <div class="pastille">
+                              <label for="boeuf_herbes">
+                                  <h5>Filet de boeuf aux herbes</h5>
+                                  <p>Accompagné de sa ribambelle de légu... <span>40€</span></p>
+                              </label>
+                              <input type="checkbox" name="boeuf_herbes" id="boeuf_herbes"/>
+                          </div>
+                          <div class="pastille">
+                          <label for="queue_boeuf">
+                              <h5>Parmentier de queue de boeuf</h5>
+                              <p>A la truffe noire sur sa purée de panais <span>35€</span></p>
+                          </label>
+                          <input type="checkbox" name="queue_boeuf" id="queue_boeuf"/>
+                          </div>
+                          <div class="pastille">
+                          <label for="turbot">
+                              <h5>Filet de Turbot</h5>
+                              <p>Aux agrumes <span>44€</span></p>
+                          </label>
+                          <input type="checkbox" name="turbot" id="turbot"/>
+                          </div>
+                      </div>
 
-            <section class="plats">
 
-            </section>
+                  <div class="pastille_all">
+                      <div class="pastille_title">
+                          <h4>DESSERTS</h4>
+                          </div>
+                      <div class="pastille">
+                          <label for="paris_brest">
+                              <h5>Paris-Brest</h5>
+                              <p>Revisité<span>18€</span></p>
+                          </label>
+                          <input type="checkbox" name="paris_brest" id="paris_brest"/>
+                      </div>
+                      <div class="pastille">
+                          <label for="macaron">
+                              <h5>Macaron au chocolat d'exception</h5>
+                              <p>Et glace à la vanille de Madagascar <span>22€</span></p>
+                          </label>
+                          <input type="checkbox" name="macaron" id="macaron"/>
+                      </div>
+                      <div class="pastille">
+                          <label for="mousse">
+                              <h5>Mousse au chocolat</h5>
+                              <p>Au piment d'espelette et à la truffe noire <span>23€</span></p>
+                          </label>
+                          <input type="checkbox" name="mousse" id="mousse"/>
+                      </div>
+                  </div>
+                      <div class="commander">
+                          <input type="submit" name="Commander" value="Commander">
+                      </div>
+                    </div>
+              </form>
+          </section>
+      </main>
 
-            <section class="desserts">
-                
-            </section>
-        </main>
-
-        <footer>
-            <div class="Logo_footer">
-                <img src="Images/logo/ohmyfood.png" alt="Logo Ohmyfood!"/>
-            </div>
-            <nav class="nav_foot">
-                <ul>
-                    <li>
-                        <a href="#">Proposer un restaurant</a>
-                    </li>
-                    <li>
-                        <a href="#">Devenir partenaire</a>
-                    </li>
-                    <li>
-                        <a href="#">Mentions légales</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+      <footer>
+          <div class="logo_footer">
+            <p>Ohmyfood</p>
+          </div>
+          <div class="nav_foot">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+              </li>
+              <li>
+                <a href="#">Mentions légales</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+        </div>
         </footer>
-    </body>
+  </body>
 </html>
