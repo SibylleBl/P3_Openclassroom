@@ -198,8 +198,16 @@ section.menu .pastille_all {
   width: 100%;
   padding: 5% 0;
 }
+section.menu .pastille_all .pastille_title {
+  width: 10%;
+  color: #787373;
+  border-bottom: 3px solid #99e2d0;
+  margin: 0 0 2% 5%;
+  padding-bottom: 1%;
+}
 section.menu .pastille_all .pastille {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 5%;
   margin: 2% 5%;
@@ -209,6 +217,18 @@ section.menu .pastille_all .pastille {
 }
 section.menu .pastille_all .pastille h5 {
   font-size: 105%;
+  margin-bottom: 1%;
+}
+section.menu .pastille_all .pastille label {
+  width: 100%;
+}
+section.menu .pastille_all .pastille input {
+  display: none;
+}
+section.menu .pastille_all .pastille .description_plat {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 section.menu .commander {
   display: flex;

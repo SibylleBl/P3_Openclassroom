@@ -240,8 +240,17 @@ section.menu {
     width: 100%;
     padding: 5% 0;
 
+    .pastille_title {
+        width: 10%;
+        color: darken($grey-color, 15%);
+        border-bottom: 3px solid $third-color;
+        margin: 0 0 2% 5%;
+        padding-bottom: 1%;
+    }
+
     .pastille {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       padding: 5%;
       margin: 2% 5%;
@@ -250,6 +259,23 @@ section.menu {
       @include shadow;
       h5 {
         font-size: 105%;
+        margin-bottom: 1%;
+      }
+
+      label {
+        width: 100%;
+      }
+
+      input {
+          display: none;
+      }
+
+      .description_plat {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+        
       }
     }
   }
