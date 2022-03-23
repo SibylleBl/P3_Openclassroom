@@ -9,18 +9,22 @@ body {
   flex-direction: column;
   align-items: center;
 }
-body ul {
+
+ul {
   list-style-type: none;
 }
-body p {
+
+p {
   margin: 0;
 }
-body a {
+
+a {
   text-decoration: none;
   color: black;
 }
-body h4,
-body h5 {
+
+h4,
+h5 {
   margin: 0;
 }
 
@@ -43,14 +47,20 @@ body h5 {
 }
 .entete .navigation .localisation {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-self: center;
   background-color: #ede8e8;
   padding: 4% 0;
   box-shadow: inset 0 1px 10px #9e9a9a;
 }
 .entete .navigation .localisation .icone {
   margin-right: 2%;
+}
+.entete .navigation .explorer .texte_explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 .entete .navigation .explorer .texte_explorer h1 {
   font-size: 150%;
@@ -153,8 +163,7 @@ nav div.buttons_nav button i {
 
 main {
   width: 100%;
-  position: absolute;
-  margin-top: 75%;
+  margin-top: -20%;
 }
 
 section.home {
@@ -251,11 +260,6 @@ section.menu .commander input {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 599px) {
-  .restaurants {
-    flex-direction: row;
-  }
-}
 .restaurants .restaurant figure {
   display: flex;
   flex-direction: column;
@@ -265,15 +269,20 @@ section.menu .commander input {
   margin: 3%;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
+.restaurants .restaurant figure .restaurants_elements {
+  position: relative;
+}
 .restaurants .restaurant figure h2 {
   margin: 0;
 }
 .restaurants .restaurant figure .new {
+  display: inline;
   position: absolute;
   background-color: #99e2d0;
   color: #1b6150;
+  right: 3%;
+  top: 3%;
   padding: 2%;
-  margin: 3% 0 3% 72%;
 }
 .restaurants .restaurant figure .restaurant_text {
   margin: 0;
@@ -292,6 +301,7 @@ section.menu .commander input {
 
 footer {
   width: 100%;
+  height: auto;
   background-color: #272626;
 }
 footer .logo_footer {
@@ -311,6 +321,123 @@ footer li i.fa-handshake-angle {
 }
 footer li a {
   color: white;
+}
+
+@media only screen and (min-width: 899px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .entete {
+    padding-bottom: 5%;
+  }
+  .entete .logo_header {
+    padding: 1%;
+  }
+  .entete .logo_header img {
+    width: 100%;
+  }
+  .entete .navigation {
+    width: 100%;
+  }
+  .entete .navigation .localisation {
+    padding: 2%;
+    font-size: 120%;
+  }
+  .entete .navigation .explorer .texte_explorer {
+    padding-top: 2%;
+  }
+  .entete .navigation .explorer .texte_explorer p {
+    padding-bottom: 5%;
+  }
+  .entete .navigation .explorer .bouton_explorer a {
+    padding: 1em;
+  }
+
+  nav h1 {
+    margin: 0 0 3% 3%;
+    font-size: 200%;
+  }
+  nav div.buttons_nav {
+    flex-direction: row;
+  }
+  nav div.buttons_nav .button_nav {
+    width: 40%;
+  }
+  nav div.buttons_nav .button_nav p {
+    position: absolute;
+    margin-left: -1px;
+    color: white;
+    background-color: #9356dc;
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+  nav div.buttons_nav .button_nav .button {
+    width: 20%;
+  }
+
+  section.home {
+    padding: 4% 0;
+  }
+  section.home div.restaurants_title h1 {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    font-size: 200%;
+  }
+  section.home div.restaurants {
+    width: auto;
+    padding: 0 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section.home div.restaurant {
+    width: 50%;
+  }
+  section.home div.restaurant div.new {
+    padding: 1%;
+    margin: 1% 1% 0 47%;
+  }
+
+  footer .logo_footer {
+    padding: 5% 5% 0 40px;
+    font-size: 150%;
+  }
+  footer .nav_foot ul li i {
+    padding-right: 1%;
+  }
+
+  header .elements_header {
+    padding: 2%;
+    justify-content: flex-start;
+  }
+  header .elements_header .logo_header {
+    margin-left: 20%;
+  }
+
+  section.menu .menus_title {
+    justify-content: space-between;
+    padding: 0 4%;
+  }
+  section.menu .menus_title .menu_title {
+    font-size: 120%;
+  }
+  section.menu form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section.menu form .pastille_all {
+    width: 33%;
+  }
+  section.menu .commander input {
+    padding: 20%;
+    font-size: 130%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
