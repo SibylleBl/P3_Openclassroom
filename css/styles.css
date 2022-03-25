@@ -248,7 +248,6 @@ section.menu .pastille_all {
   padding: 5% 0;
   transform: scale(1);
   transition-duration: 200ms;
-  animation-timing-function: 6, start;
 }
 section.menu .pastille_all .pastille_title {
   width: 10%;
