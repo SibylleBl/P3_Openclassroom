@@ -246,6 +246,9 @@ section.menu .pastille_all {
   flex-direction: column;
   width: 100%;
   padding: 5% 0;
+  transform: scale(1);
+  transition-duration: 200ms;
+  animation-timing-function: 6, start;
 }
 section.menu .pastille_all .pastille_title {
   width: 10%;
@@ -257,8 +260,9 @@ section.menu .pastille_all .pastille_title {
 section.menu .pastille_all .pastille {
   display: flex;
   position: relative;
-  flex-direction: row;
+  overflow: hidden;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   height: 100px;
   margin: 2% 5%;
@@ -270,35 +274,41 @@ section.menu .pastille_all .pastille:hover {
   box-shadow: 4px 8px 15px 0px #575555;
 }
 section.menu .pastille_all .pastille h5 {
-  font-size: 105%;
-  margin-bottom: 1%;
-  padding-left: 5%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 2%;
 }
 section.menu .pastille_all .pastille label {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 section.menu .pastille_all .pastille input {
   display: none;
 }
 section.menu .pastille_all .pastille .description_plat {
-  width: 100%;
+  width: auto;
   display: flex;
-  justify-content: space-between;
-}
-section.menu .pastille_all .pastille .description_plat p {
-  padding: 0 5%;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 3%;
+  overflow: hidden;
   white-space: nowrap;
+}
+section.menu .pastille_all .pastille .description_plat p, section.menu .pastille_all .pastille .description_plat h5 {
+  font-size: 110%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section.menu .pastille_all .pastille .description_plat p.price {
+section.menu .pastille_all .pastille div.price {
+  display: flex;
+  width: 10%;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 110%;
   font-weight: 700;
-  transform: translateX(0);
-  transition-duration: 350ms;
-  overflow: auto;
+  padding: 3%;
+  transform: translateX(0%);
+  transition-duration: 300ms;
 }
 section.menu .pastille_all .pastille .check {
   display: flex;
@@ -308,27 +318,25 @@ section.menu .pastille_all .pastille .check {
   justify-content: center;
   border-radius: 0 15px 15px 0;
   font-size: 200%;
-  left: 80%;
+  right: 0px;
   width: 20%;
   height: 100%;
   background-color: #99e2d0;
-  transform-origin: right 50%;
-  transform: scaleX(0);
-  transition-property: transform;
+  transform: translateX(100%);
   transition-duration: 300ms;
 }
 section.menu .pastille_all .pastille .check i {
   transform: rotate(0deg);
-  transition-duration: 500ms;
+  transition-duration: 400ms;
+}
+section.menu .pastille_all .pastille:hover div.price {
+  transform: translateX(-120%);
 }
 section.menu .pastille_all .pastille:hover .check {
-  transform: scale(1);
+  transform: translateX(0%);
 }
-section.menu .pastille_all .pastille:hover .check i {
+section.menu .pastille_all .pastille:hover i {
   transform: rotate(360deg);
-}
-section.menu .pastille_all .pastille:hover p.price {
-  transform: translateX(-110%);
 }
 section.menu .commander {
   display: flex;

@@ -276,6 +276,8 @@ section.menu {
     flex-direction: column;
     width: 100%;
     padding: 5% 0;
+    transform: scale(1);
+    transition-duration: 200ms;
 
     .pastille_title {
       width: 10%;
@@ -288,8 +290,9 @@ section.menu {
     .pastille {
       display: flex;
       position: relative;
-      flex-direction: row;
+      overflow: hidden;
       justify-content: space-between;
+      flex-direction: row;
       align-items: center;
       height: 100px;
       margin: 2% 5%;
@@ -297,16 +300,15 @@ section.menu {
       border-radius: 15px;
       @include shadow;
       h5 {
-        font-size: 105%;
-        margin-bottom: 1%;
-        padding-left: 5%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-bottom: 2%;
       }
 
       label {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
       }
 
       input {
@@ -314,24 +316,33 @@ section.menu {
       }
 
       .description_plat {
-        width: 100%;
+        width: auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 3%;
+        overflow: hidden;
+        white-space: nowrap;
+          
 
-        p {
-          padding: 0 5%;
-          white-space: nowrap;
+        p, h5 {
+          font-size: 110%;
           overflow: hidden;
-          text-overflow: ellipsis;
+          text-overflow: ellipsis; 
+          
         }
+      }
 
-        p.price {
-          font-weight: 700;
-          transform: translateX(0);
-          transition-duration: 350ms;
-          overflow: auto;
-        }
-
+      div.price {
+        display: flex;
+        width: 10%;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 110%;
+        font-weight: 700;
+        padding: 3%;
+        transform: translateX(0%);
+        transition-duration: 300ms;
       }
 
       .check {
@@ -342,33 +353,35 @@ section.menu {
         justify-content: center;
         border-radius: 0 15px 15px 0;
         font-size: 200%;
-        left: 80%;
+        right: 0px;
         width: 20%;
         height: 100%;
         background-color: $third-color;
-        transform-origin: right 50%;
-        transform: scaleX(0);
-        transition-property: transform;
+        transform: translateX(100%);
         transition-duration: 300ms;
 
         i {
           transform: rotate(0deg);
-          transition-duration: 500ms;
+          transition-duration: 400ms;
+
         }
       }
 
       &:hover {
+        div.price {
+          transform: translateX(-120%);
+        }
         .check {
-          transform: scale(1);
-          i {
-            transform: rotate(360deg);
-          }
+          transform: translateX(0%);
         }
 
-        p.price{
-          transform: translateX(-110%);
+        i {
+          transform: rotate(360deg);
         }
       }
+
+     
+           
     }
 
     
