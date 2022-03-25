@@ -7,6 +7,9 @@
 
 @mixin shadow {
   box-shadow: 4px 7px 10px 0px $grey-color;
+   &:hover {
+     box-shadow: 4px 8px 15px 0px #575555;
+   }
 }
 
 @mixin button {

@@ -9,6 +9,46 @@ body {
   flex-direction: column;
   align-items: center;
 }
+body .blocks {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+body .block {
+  --sz: 8vmin;
+  --tX: 0;
+  --animation: 700ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite
+    alternate-reverse;
+  --hm: 4.5vmin;
+  height: var(--sz);
+  width: var(--sz);
+  background-image: var(--bg);
+  border-radius: 50%;
+  transform: translateX(var(--tX));
+  mix-blend-mode: lighten;
+}
+body .purle {
+  --bg: linear-gradient(-50deg, #b698db 0%, #9356dc 100%);
+  margin-right: var(--hm);
+  animation: attract-purle var(--animation);
+}
+body .pink {
+  --bg: linear-gradient(50deg, #f8b2e4 0%, #ff79da 100%);
+  margin-left: var(--hm);
+  animation: attract-pink var(--animation);
+}
+@keyframes attract-purle {
+  to {
+    transform: translateX(calc(var(--sz) + var(--hm) / 4));
+  }
+}
+@keyframes attract-pink {
+  to {
+    transform: translateX(calc(var(--sz) * -1 - var(--hm) / 4));
+  }
+}
 
 ul {
   list-style-type: none;
@@ -28,6 +68,11 @@ h5 {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .entete {
   display: flex;
   flex-direction: column;
@@ -44,6 +89,9 @@ h5 {
 .entete .logo_header img {
   width: 50%;
   height: auto;
+}
+.entete .navigation {
+  width: 100%;
 }
 .entete .navigation .localisation {
   display: flex;
@@ -77,8 +125,12 @@ h5 {
   color: white;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
+.entete .navigation .explorer a:hover {
+  box-shadow: 4px 8px 15px 0px #575555;
+}
 
 header {
+  width: 100%;
   background-color: #f8f6f6;
 }
 header img {
@@ -155,6 +207,9 @@ nav div.buttons_nav button {
   border: none;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
+nav div.buttons_nav button:hover {
+  box-shadow: 4px 8px 15px 0px #575555;
+}
 nav div.buttons_nav button i {
   font-size: 120%;
   padding: 0 10% 0 15%;
@@ -192,6 +247,31 @@ section.menu .menus_title {
   justify-content: space-around;
   letter-spacing: 1px;
 }
+section.menu .menus_title .button_heart {
+  position: relative;
+  font-size: 140%;
+}
+section.menu .menus_title .button_heart i.far.fa-heart.empty {
+  position: absolute;
+  top: -5px;
+  right: 1px;
+  color: #9e9a9a;
+}
+section.menu .menus_title .button_heart i.far.fa-heart.empty:hover {
+  opacity: 0%;
+}
+section.menu .menus_title .button_heart i.fas.fa-heart.full {
+  position: absolute;
+  top: -5px;
+  right: 1px;
+  opacity: 0%;
+  background: -webkit-linear-gradient(top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+section.menu .menus_title .button_heart i.fas.fa-heart.full:hover {
+  opacity: 100%;
+}
 section.menu .menus_title .menu_title {
   font-family: "Shrikhand";
   display: flex;
@@ -224,6 +304,9 @@ section.menu .pastille_all .pastille {
   border-radius: 15px;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
+section.menu .pastille_all .pastille:hover {
+  box-shadow: 4px 8px 15px 0px #575555;
+}
 section.menu .pastille_all .pastille h5 {
   font-size: 105%;
   margin-bottom: 1%;
@@ -253,6 +336,9 @@ section.menu .commander input {
   box-shadow: 4px 7px 10px 0px #9e9a9a;
   border: none;
 }
+section.menu .commander input:hover {
+  box-shadow: 4px 8px 15px 0px #575555;
+}
 
 .restaurants {
   width: 100%;
@@ -268,6 +354,9 @@ section.menu .commander input {
   border-radius: 15px;
   margin: 3%;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
+}
+.restaurants .restaurant figure:hover {
+  box-shadow: 4px 8px 15px 0px #575555;
 }
 .restaurants .restaurant figure .restaurants_elements {
   position: relative;
@@ -290,6 +379,31 @@ section.menu .commander input {
   justify-content: space-between;
   align-items: center;
   padding: 2% 5%;
+}
+.restaurants .restaurant figure .restaurant_text .button_heart {
+  position: relative;
+  font-size: 140%;
+}
+.restaurants .restaurant figure .restaurant_text .button_heart i.far.fa-heart.empty {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #9e9a9a;
+}
+.restaurants .restaurant figure .restaurant_text .button_heart i.far.fa-heart.empty:hover {
+  opacity: 0%;
+}
+.restaurants .restaurant figure .restaurant_text .button_heart i.fas.fa-heart.full {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  opacity: 0%;
+  background: -webkit-linear-gradient(top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurants .restaurant figure .restaurant_text .button_heart i.fas.fa-heart.full:hover {
+  opacity: 100%;
 }
 .restaurants .restaurant figure img {
   width: 100%;
@@ -324,15 +438,6 @@ footer li a {
 }
 
 @media only screen and (min-width: 899px) {
-  body {
-    max-width: 1440px;
-    margin: auto;
-  }
-
-  header {
-    width: 100%;
-  }
-
   .entete {
     padding-bottom: 5%;
   }
@@ -340,9 +445,6 @@ footer li a {
     padding: 1%;
   }
   .entete .logo_header img {
-    width: 100%;
-  }
-  .entete .navigation {
     width: 100%;
   }
   .entete .navigation .localisation {
@@ -357,6 +459,11 @@ footer li a {
   }
   .entete .navigation .explorer .bouton_explorer a {
     padding: 1em;
+  }
+
+  body {
+    max-width: 1440px;
+    margin: auto;
   }
 
   nav h1 {

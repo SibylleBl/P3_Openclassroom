@@ -23,6 +23,52 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .blocks {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .block {
+    --sz: 8vmin;
+    --tX: 0;
+    --animation: 700ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite
+      alternate-reverse;
+    --hm: 4.5vmin;
+    height: var(--sz);
+    width: var(--sz);
+    background-image: var(--bg);
+    border-radius: 50%;
+    transform: translateX(var(--tX));
+    mix-blend-mode: lighten;
+  }
+
+  .purle {
+    --bg: linear-gradient(-50deg, #b698db 0%, #9356dc 100%);
+    margin-right: var(--hm);
+    animation: attract-purle var(--animation);
+  }
+
+  .pink {
+    --bg: linear-gradient(50deg, #f8b2e4 0%, #ff79da 100%);
+    margin-left: var(--hm);
+    animation: attract-pink var(--animation);
+  }
+
+  @keyframes attract-purle {
+    to {
+      transform: translateX(calc(var(--sz) + calc(var(--hm) / 4)));
+    }
+  }
+
+  @keyframes attract-pink {
+    to {
+      transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 4)));
+    }
+  }
 }
 
 ul {
@@ -43,6 +89,11 @@ h5 {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .entete {
   display: flex;
   flex-direction: column;
@@ -52,21 +103,18 @@ h5 {
   text-align: center;
   padding: 2% 0 15% 0;
   background-color: $background-light;
-  
 
   .logo_header {
     padding: 3%;
-    
 
     img {
       width: 50%;
       height: auto;
-      
     }
   }
 
   .navigation {
-    
+    width: 100%;
     .localisation {
       display: flex;
       justify-content: center;
@@ -74,8 +122,6 @@ h5 {
       background-color: darken($color: $background-light, $amount: 5%);
       padding: 4% 0;
       box-shadow: inset 0 1px 10px $grey-color;
-      
-      
 
       .icone {
         margin-right: 2%;
@@ -87,7 +133,7 @@ h5 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-      align-self: center;
+        align-self: center;
         h1 {
           font-size: 150%;
           font-weight: 600;
@@ -106,8 +152,8 @@ h5 {
 }
 
 header {
+  width: 100%;
   background-color: $background-light;
-  
 
   img {
     width: 100%;
@@ -231,6 +277,34 @@ section.menu {
     justify-content: space-around;
     letter-spacing: 1px;
 
+    .button_heart {
+      position: relative;
+      font-size: 140%;
+
+      i.far.fa-heart.empty {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        color: $grey-color;
+        &:hover {
+          opacity: 0%;
+        }
+      }
+
+      i.fas.fa-heart.full {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        opacity: 0%;
+        background: -webkit-linear-gradient(top, $first-color, $second-color);
+        -webkit-background-clip: text;
+        color: transparent;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
+
     .menu_title {
       font-family: "Shrikhand";
       display: flex;
@@ -338,6 +412,34 @@ section.menu {
       justify-content: space-between;
       align-items: center;
       padding: 2% 5%;
+
+      .button_heart {
+        position: relative;
+        font-size: 140%;
+
+        i.far.fa-heart.empty {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          color: $grey-color;
+          &:hover {
+            opacity: 0%;
+          }
+        }
+
+        i.fas.fa-heart.full {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          opacity: 0%;
+          background: -webkit-linear-gradient(top, $first-color, $second-color);
+          -webkit-background-clip: text;
+          color: transparent;
+          &:hover {
+            opacity: 100%;
+          }
+        }
+      }
     }
 
     img {
@@ -379,17 +481,6 @@ footer {
 // Version desktop //
 
 @media only screen and (min-width: 899px) {
-
-  body {
-    max-width: 1440px;
-    margin: auto;
-    
-  }
-
-  header {
-    width: 100%;
-  }
-
   .entete {
     padding-bottom: 5%;
 
@@ -402,8 +493,6 @@ footer {
     }
 
     .navigation {
-      width: 100%;
-  
       .localisation {
         padding: 2%;
         font-size: 120%;
@@ -423,11 +512,14 @@ footer {
           }
         }
       }
-    }  
+    }
+  }
+  body {
+    max-width: 1440px;
+    margin: auto;
   }
 
   nav {
-
     h1 {
       margin: 0 0 3% 3%;
       font-size: 200%;
@@ -447,7 +539,7 @@ footer {
           padding: 10px 15px;
           border-radius: 20px;
         }
-        
+
         .button {
           width: 20%;
         }
@@ -456,7 +548,6 @@ footer {
   }
 
   section.home {
-
     padding: 4% 0;
 
     div.restaurants_title {
@@ -472,7 +563,6 @@ footer {
       padding: 0 5%;
       flex-direction: row;
       flex-wrap: wrap;
-
     }
 
     div.restaurant {
@@ -509,12 +599,10 @@ footer {
       .logo_header {
         margin-left: 20%;
       }
-      
     }
   }
 
   section.menu {
-
     .menus_title {
       justify-content: space-between;
       padding: 0 4%;
@@ -522,14 +610,12 @@ footer {
       .menu_title {
         font-size: 120%;
       }
-
     }
 
     form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      
 
       .pastille_all {
         width: 33%;
@@ -540,11 +626,7 @@ footer {
       input {
         padding: 20%;
         font-size: 130%;
-      }      
-
+      }
     }
-
   }
-
-  
 }
