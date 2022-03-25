@@ -246,8 +246,6 @@ section.menu .pastille_all {
   flex-direction: column;
   width: 100%;
   padding: 5% 0;
-  transform: scale(1);
-  transition-duration: 200ms;
 }
 section.menu .pastille_all .pastille_title {
   width: 10%;
