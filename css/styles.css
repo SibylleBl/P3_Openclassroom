@@ -267,8 +267,22 @@ section.menu .pastille_all .pastille {
   border-radius: 15px;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
+section.menu .pastille_all .pastille.pastille {
+  animation: pastille 1000ms 500ms;
+  animation-fill-mode: forwards;
+}
 section.menu .pastille_all .pastille:hover {
   box-shadow: 4px 8px 15px 0px #575555;
+}
+@keyframes pastille {
+  0% {
+    transform: scaleY(0) scaleX(1);
+    animation-name: load_pastille;
+    animation-duration: 500ms;
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
 }
 section.menu .pastille_all .pastille h5 {
   margin-bottom: 2%;
@@ -328,7 +342,7 @@ section.menu .pastille_all .pastille .check i {
   transition-duration: 400ms;
 }
 section.menu .pastille_all .pastille:hover div.price {
-  padding-right: 100px;
+  padding-right: 102px;
 }
 section.menu .pastille_all .pastille:hover .check {
   transform: translateX(0%);

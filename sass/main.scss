@@ -276,6 +276,7 @@ section.menu {
     flex-direction: column;
     width: 100%;
     padding: 5% 0;
+    
 
     .pastille_title {
       width: 10%;
@@ -296,7 +297,24 @@ section.menu {
       margin: 2% 5%;
       background-color: white;
       border-radius: 15px;
+      &.pastille {
+        animation: pastille 1000ms 500ms;
+        animation-fill-mode: forwards;
+      }
       @include shadow;
+      @keyframes pastille {
+        0% {
+          transform: scaleY(0) scaleX(1);
+          animation-name: load_pastille;
+          animation-duration: 500ms;
+        }
+        100% {
+          transform: scaleY(1) scaleX(1);
+        }
+      }
+
+      
+
       h5 {
         margin-bottom: 2%;
       }
@@ -368,7 +386,7 @@ section.menu {
 
       &:hover {
         div.price {
-          padding-right: 100px;
+          padding-right: 102px;
         }
         .check {
           transform: translateX(0%);
