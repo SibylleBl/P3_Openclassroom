@@ -14,15 +14,71 @@
 @import "./pages/project";
 
 body {
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  box-sizing: border-box;
+  margin: auto;
   padding: 0;
+}
+
+.load_screen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+
+  animation-duration: 3s;
+  animation-name: sib;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes sib {
+    0% {
+      z-index: 1000;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    border: 7px solid $first-color;
+    border-bottom-color: $second-color;
+    border-radius: 50%;
+    animation: rotation 1000ms linear infinite;
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.site {
   width: 100%;
   height: auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -203,7 +259,7 @@ nav {
 
 main {
   width: 100%;
-
+  position: relative;
   margin-top: -20%;
 }
 
@@ -276,7 +332,6 @@ section.menu {
     flex-direction: column;
     width: 100%;
     padding: 5% 0;
-    
 
     .pastille_title {
       width: 10%;
@@ -304,16 +359,14 @@ section.menu {
       @include shadow;
       @keyframes pastille {
         0% {
-          transform: scaleY(0) scaleX(1);
+          transform: scaleY(0);
           animation-name: load_pastille;
           animation-duration: 500ms;
         }
         100% {
-          transform: scaleY(1) scaleX(1);
+          transform: scaleY(1);
         }
       }
-
-      
 
       h5 {
         margin-bottom: 2%;
@@ -324,7 +377,6 @@ section.menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
       }
 
       input {
@@ -339,13 +391,12 @@ section.menu {
         padding-left: 3%;
         overflow: hidden;
         white-space: nowrap;
-          
 
-        p, h5 {
+        p,
+        h5 {
           font-size: 110%;
           overflow: hidden;
-          text-overflow: ellipsis; 
-          
+          text-overflow: ellipsis;
         }
       }
 
@@ -380,7 +431,6 @@ section.menu {
         i {
           transform: rotate(0deg);
           transition-duration: 400ms;
-
         }
       }
 
@@ -396,12 +446,7 @@ section.menu {
           transform: rotate(360deg);
         }
       }
-
-     
-           
     }
-
-    
   }
 
   .commander {

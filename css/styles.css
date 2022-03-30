@@ -1,13 +1,66 @@
 body {
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  box-sizing: border-box;
+  margin: auto;
   padding: 0;
+}
+
+.load_screen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  animation-duration: 3s;
+  animation-name: sib;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes sib {
+  0% {
+    z-index: 1000;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+.load_screen .loader {
+  width: 100px;
+  height: 100px;
+  border: 7px solid #9356dc;
+  border-bottom-color: #ff79da;
+  border-radius: 50%;
+  animation: rotation 1000ms linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.site {
   width: 100%;
   height: auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -178,6 +231,7 @@ nav div.buttons_nav button i {
 
 main {
   width: 100%;
+  position: relative;
   margin-top: -20%;
 }
 
@@ -276,12 +330,12 @@ section.menu .pastille_all .pastille:hover {
 }
 @keyframes pastille {
   0% {
-    transform: scaleY(0) scaleX(1);
+    transform: scaleY(0);
     animation-name: load_pastille;
     animation-duration: 500ms;
   }
   100% {
-    transform: scaleY(1) scaleX(1);
+    transform: scaleY(1);
   }
 }
 section.menu .pastille_all .pastille h5 {
@@ -305,7 +359,8 @@ section.menu .pastille_all .pastille .description_plat {
   overflow: hidden;
   white-space: nowrap;
 }
-section.menu .pastille_all .pastille .description_plat p, section.menu .pastille_all .pastille .description_plat h5 {
+section.menu .pastille_all .pastille .description_plat p,
+section.menu .pastille_all .pastille .description_plat h5 {
   font-size: 110%;
   overflow: hidden;
   text-overflow: ellipsis;
