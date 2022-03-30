@@ -20,11 +20,11 @@ body {
   top: 0;
   z-index: -1;
   animation-duration: 3s;
-  animation-name: sib;
+  animation-name: appear_loadscreen;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-@keyframes sib {
+@keyframes appear_loadscreen {
   0% {
     z-index: 1000;
   }
@@ -319,23 +319,23 @@ section.menu .pastille_all .pastille {
   margin: 2% 5%;
   background-color: white;
   border-radius: 15px;
+  opacity: 0%;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
-}
-section.menu .pastille_all .pastille.pastille {
-  animation: pastille 1000ms 500ms;
-  animation-fill-mode: forwards;
 }
 section.menu .pastille_all .pastille:hover {
   box-shadow: 4px 8px 15px 0px #575555;
 }
+section.menu .pastille_all .pastille.pastille {
+  animation: pastille 2s forwards;
+}
 @keyframes pastille {
   0% {
-    transform: scaleY(0);
-    animation-name: load_pastille;
-    animation-duration: 500ms;
+    opacity: 0%;
+    transform: translateY(20px);
   }
   100% {
-    transform: scaleY(1);
+    opacity: 100%;
+    transform: translateY(0px);
   }
 }
 section.menu .pastille_all .pastille h5 {
@@ -404,6 +404,15 @@ section.menu .pastille_all .pastille:hover .check {
 }
 section.menu .pastille_all .pastille:hover i {
   transform: rotate(360deg);
+}
+section.menu .pastille_all .pastille:nth-child(3) {
+  animation-delay: 0.2s;
+}
+section.menu .pastille_all .pastille:nth-child(4) {
+  animation-delay: 0.4s;
+}
+section.menu .pastille_all .pastille:nth-child(5) {
+  animation-delay: 0.6s;
 }
 section.menu .commander {
   display: flex;
