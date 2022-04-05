@@ -472,6 +472,10 @@ section.menu .commander input:hover {
   align-items: center;
   padding: 2% 5%;
 }
+.restaurants .restaurant figure .restaurant_text h2 {
+  font-size: 120%;
+  margin-bottom: 1%;
+}
 .restaurants .restaurant figure .restaurant_text .button_heart {
   position: relative;
   font-size: 140%;

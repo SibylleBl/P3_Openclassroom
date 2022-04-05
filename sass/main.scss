@@ -99,6 +99,8 @@ h5 {
   margin: 0;
 }
 
+
+
 button {
   background-color: transparent;
   border: none;
@@ -511,6 +513,11 @@ section.menu {
       justify-content: space-between;
       align-items: center;
       padding: 2% 5%;
+
+      h2 {
+        font-size: 120%;
+        margin-bottom: 1%;
+      }
 
       .button_heart {
         position: relative;
