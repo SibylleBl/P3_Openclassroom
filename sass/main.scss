@@ -113,20 +113,19 @@ button {
   height: auto;
   align-items: center;
   text-align: center;
-  padding: 2% 0 15% 0;
   background-color: $background-light;
 
   .logo_header {
     width: 100%;
     position: relative;
-    box-shadow: 5px 12px 12px -8px $grey-color;
+    
     
 
     img {
       width: 50%;
       max-width: 400px;
       height: auto;
-      padding: 2% 0%;
+      padding: 4% 0% 2% 0%;
     }
   }
 
@@ -138,6 +137,7 @@ button {
       align-self: center;
       background-color: darken($color: $background-light, $amount: 5%);
       padding: 4% 0;
+      box-shadow: inset 0px 10px 8px -8px $grey-color;
 
       .icone {
         margin-right: 2%;
@@ -523,7 +523,7 @@ section.menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2% 5%;
+      padding: 3% 5%;
 
       h2 {
         font-size: 120%;
@@ -578,9 +578,14 @@ footer {
   .logo_footer {
     font-family: "Shrikhand";
     color: white;
-    font-size: 110%;
-    padding: 8% 5% 0% 10%;
+    font-size: 115%;
+    padding: 5% 5% 0% 8%;
   }
+
+  ul {
+    margin-bottom: 0;
+    padding: 0% 0% 3% 8%;
+    }
 
   li {
     padding: 1% 0;
@@ -601,6 +606,12 @@ footer {
 @media only screen and (min-width: 899px) {
   .entete {
     padding-bottom: 5%;
+
+    .logo_header {
+      img {
+        padding: 2% 0% 2% 0%;
+      }
+    }
 
     .navigation {
       .localisation {
@@ -686,13 +697,14 @@ footer {
 
   footer {
     .logo_footer {
-      padding: 5% 5% 0 40px;
-      font-size: 150%;
+      padding: 5% 5% 2% 8%;
+      font-size: 200%;
     }
 
     .nav_foot {
       ul {
         li {
+          font-size: 120%;
           i {
             padding-right: 1%;
           }
