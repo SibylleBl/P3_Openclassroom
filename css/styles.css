@@ -97,11 +97,15 @@ button {
   background-color: #f8f6f6;
 }
 .entete .logo_header {
-  padding: 3%;
+  width: 100%;
+  position: relative;
+  box-shadow: 5px 12px 12px -8px #9e9a9a;
 }
 .entete .logo_header img {
   width: 50%;
+  max-width: 400px;
   height: auto;
+  padding-bottom: 1%;
 }
 .entete .navigation {
   width: 100%;
@@ -112,7 +116,6 @@ button {
   align-self: center;
   background-color: #ede8e8;
   padding: 4% 0;
-  box-shadow: inset 0 1px 10px #9e9a9a;
 }
 .entete .navigation .localisation .icone {
   margin-right: 2%;
@@ -282,6 +285,7 @@ section.menu .menus_title .button_heart i.fas.fa-heart.full {
   background: -webkit-linear-gradient(top, #9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
+  transition: 0.3s;
 }
 section.menu .menus_title .button_heart i.fas.fa-heart.full:hover {
   opacity: 100%;
@@ -365,7 +369,7 @@ section.menu .pastille_all .pastille .description_plat h5 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section.menu .pastille_all .pastille div.price {
+section.menu .pastille_all .pastille .price {
   display: flex;
   width: 10%;
   align-items: flex-end;
@@ -396,7 +400,7 @@ section.menu .pastille_all .pastille .check i {
   transform: rotate(0deg);
   transition-duration: 400ms;
 }
-section.menu .pastille_all .pastille:hover div.price {
+section.menu .pastille_all .pastille:hover .price {
   padding-right: 102px;
 }
 section.menu .pastille_all .pastille:hover .check {
@@ -497,6 +501,7 @@ section.menu .commander input:hover {
   background: -webkit-linear-gradient(top, #9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
+  transition: 0.3s;
 }
 .restaurants .restaurant figure .restaurant_text .button_heart i.fas.fa-heart.full:hover {
   opacity: 100%;
@@ -536,12 +541,6 @@ footer li a {
 @media only screen and (min-width: 899px) {
   .entete {
     padding-bottom: 5%;
-  }
-  .entete .logo_header {
-    padding: 1%;
-  }
-  .entete .logo_header img {
-    width: 100%;
   }
   .entete .navigation .localisation {
     padding: 2%;

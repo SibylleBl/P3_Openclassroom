@@ -117,11 +117,16 @@ button {
   background-color: $background-light;
 
   .logo_header {
-    padding: 3%;
+    width: 100%;
+    position: relative;
+    box-shadow: 5px 12px 12px -8px $grey-color;
+    
 
     img {
       width: 50%;
+      max-width: 400px;
       height: auto;
+      padding-bottom: 1%;
     }
   }
 
@@ -133,7 +138,6 @@ button {
       align-self: center;
       background-color: darken($color: $background-light, $amount: 5%);
       padding: 4% 0;
-      box-shadow: inset 0 1px 10px $grey-color;
 
       .icone {
         margin-right: 2%;
@@ -311,6 +315,7 @@ section.menu {
         background: -webkit-linear-gradient(top, $first-color, $second-color);
         -webkit-background-clip: text;
         color: transparent;
+        transition: 0.3s;
         &:hover {
           opacity: 100%;
         }
@@ -402,7 +407,7 @@ section.menu {
         }
       }
 
-      div.price {
+      .price {
         display: flex;
         width: 10%;
         align-items: flex-end;
@@ -437,7 +442,7 @@ section.menu {
       }
 
       &:hover {
-        div.price {
+        .price {
           padding-right: 102px;
         }
         .check {
@@ -541,6 +546,7 @@ section.menu {
           background: -webkit-linear-gradient(top, $first-color, $second-color);
           -webkit-background-clip: text;
           color: transparent;
+          transition: 0.3s;
           &:hover {
             opacity: 100%;
           }
@@ -589,14 +595,6 @@ footer {
 @media only screen and (min-width: 899px) {
   .entete {
     padding-bottom: 5%;
-
-    .logo_header {
-      padding: 1%;
-
-      img {
-        width: 100%;
-      }
-    }
 
     .navigation {
       .localisation {
