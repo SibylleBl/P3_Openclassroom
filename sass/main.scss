@@ -99,8 +99,6 @@ h5 {
   margin: 0;
 }
 
-
-
 button {
   background-color: transparent;
   border: none;
@@ -118,8 +116,6 @@ button {
   .logo_header {
     width: 100%;
     position: relative;
-    
-    
 
     img {
       width: 50%;
@@ -375,7 +371,6 @@ section.menu {
         }
       }
 
-
       label {
         width: 100%;
         display: flex;
@@ -395,7 +390,6 @@ section.menu {
         padding-left: 3%;
         overflow: hidden;
         white-space: nowrap;
-        
 
         .name_food {
           font-size: 120%;
@@ -410,7 +404,6 @@ section.menu {
           overflow: hidden;
           text-overflow: ellipsis;
         }
-        
       }
 
       .price {
@@ -585,7 +578,7 @@ footer {
   ul {
     margin-bottom: 0;
     padding: 0% 0% 3% 8%;
-    }
+  }
 
   li {
     padding: 1% 0;
