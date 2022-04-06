@@ -105,7 +105,7 @@ button {
   width: 50%;
   max-width: 400px;
   height: auto;
-  padding-bottom: 1%;
+  padding: 2% 0%;
 }
 .entete .navigation {
   width: 100%;
@@ -285,7 +285,7 @@ section.menu .menus_title .button_heart i.fas.fa-heart.full {
   background: -webkit-linear-gradient(top, #9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 section.menu .menus_title .button_heart i.fas.fa-heart.full:hover {
   opacity: 100%;
@@ -342,9 +342,6 @@ section.menu .pastille_all .pastille.pastille {
     transform: translateY(0px);
   }
 }
-section.menu .pastille_all .pastille h5 {
-  margin-bottom: 2%;
-}
 section.menu .pastille_all .pastille label {
   width: 100%;
   display: flex;
@@ -354,7 +351,7 @@ section.menu .pastille_all .pastille label {
 section.menu .pastille_all .pastille input {
   display: none;
 }
-section.menu .pastille_all .pastille .description_plat {
+section.menu .pastille_all .pastille .description_food {
   width: auto;
   display: flex;
   justify-content: center;
@@ -363,9 +360,15 @@ section.menu .pastille_all .pastille .description_plat {
   overflow: hidden;
   white-space: nowrap;
 }
-section.menu .pastille_all .pastille .description_plat p,
-section.menu .pastille_all .pastille .description_plat h5 {
-  font-size: 110%;
+section.menu .pastille_all .pastille .description_food .name_food {
+  font-size: 120%;
+  font-weight: 700;
+  padding-bottom: 2%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section.menu .pastille_all .pastille .description_food .elements_food {
+  font-size: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -486,7 +489,7 @@ section.menu .commander input:hover {
 }
 .restaurants .restaurant figure .restaurant_text .button_heart i.far.fa-heart.empty {
   position: absolute;
-  top: 2px;
+  bottom: -12px;
   right: 2px;
   color: #9e9a9a;
 }
@@ -495,13 +498,13 @@ section.menu .commander input:hover {
 }
 .restaurants .restaurant figure .restaurant_text .button_heart i.fas.fa-heart.full {
   position: absolute;
-  top: 2px;
+  bottom: -12px;
   right: 2px;
   opacity: 0%;
   background: -webkit-linear-gradient(top, #9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .restaurants .restaurant figure .restaurant_text .button_heart i.fas.fa-heart.full:hover {
   opacity: 100%;

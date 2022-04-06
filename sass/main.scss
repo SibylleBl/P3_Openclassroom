@@ -126,7 +126,7 @@ button {
       width: 50%;
       max-width: 400px;
       height: auto;
-      padding-bottom: 1%;
+      padding: 2% 0%;
     }
   }
 
@@ -315,7 +315,7 @@ section.menu {
         background: -webkit-linear-gradient(top, $first-color, $second-color);
         -webkit-background-clip: text;
         color: transparent;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
           opacity: 100%;
         }
@@ -375,9 +375,6 @@ section.menu {
         }
       }
 
-      h5 {
-        margin-bottom: 2%;
-      }
 
       label {
         width: 100%;
@@ -390,7 +387,7 @@ section.menu {
         display: none;
       }
 
-      .description_plat {
+      .description_food {
         width: auto;
         display: flex;
         justify-content: center;
@@ -398,13 +395,22 @@ section.menu {
         padding-left: 3%;
         overflow: hidden;
         white-space: nowrap;
+        
 
-        p,
-        h5 {
-          font-size: 110%;
+        .name_food {
+          font-size: 120%;
+          font-weight: 700;
+          padding-bottom: 2%;
           overflow: hidden;
           text-overflow: ellipsis;
         }
+
+        .elements_food {
+          font-size: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
       }
 
       .price {
@@ -530,7 +536,7 @@ section.menu {
 
         i.far.fa-heart.empty {
           position: absolute;
-          top: 2px;
+          bottom: -12px;
           right: 2px;
           color: $grey-color;
           &:hover {
@@ -540,13 +546,13 @@ section.menu {
 
         i.fas.fa-heart.full {
           position: absolute;
-          top: 2px;
+          bottom: -12px;
           right: 2px;
           opacity: 0%;
           background: -webkit-linear-gradient(top, $first-color, $second-color);
           -webkit-background-clip: text;
           color: transparent;
-          transition: 0.3s;
+          transition: 0.2s;
           &:hover {
             opacity: 100%;
           }
