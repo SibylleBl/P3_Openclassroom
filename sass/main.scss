@@ -111,6 +111,7 @@ button {
   height: auto;
   align-items: center;
   text-align: center;
+  padding-bottom: 15%;
   background-color: $background-light;
 
   .logo_header {
@@ -158,6 +159,11 @@ button {
 
       a {
         @include button;
+      }
+
+      .bouton_explorer {
+        display: flex;
+        justify-content: center;
       }
     }
   }
@@ -596,151 +602,164 @@ footer {
 
 // Version desktop //
 
-@media only screen and (min-width: 899px) {
+@media only screen and (min-width: 768px) {
   .entete {
     padding-bottom: 5%;
 
-    .logo_header {
-      img {
-        padding: 2% 0% 2% 0%;
-      }
-    }
-
-    .navigation {
-      .localisation {
-        padding: 2%;
-        font-size: 120%;
-      }
-
-      .explorer {
-        .texte_explorer {
-          padding-top: 2%;
-          p {
-            padding-bottom: 5%;
-          }
-        }
-
-        .bouton_explorer {
-          a {
-            padding: 1em;
-          }
-        }
-      }
-    }
-  }
-  body {
-    max-width: 1440px;
-    margin: auto;
-  }
-
-  nav {
-    h1 {
-      margin: 0 0 3% 3%;
-      font-size: 200%;
-    }
-
-    div.buttons_nav {
-      flex-direction: row;
-
-      .button_nav {
-        width: 40%;
-
+    .explorer {
+      .texte_explorer {
+        padding-top: 2%;
         p {
-          position: absolute;
-          margin-left: -1px;
-          color: white;
-          background-color: $first-color;
-          padding: 10px 15px;
-          border-radius: 20px;
-        }
-
-        .button {
-          width: 20%;
+          padding-bottom: 5%;
         }
       }
     }
   }
 
-  section.home {
-    padding: 4% 0;
+  @media only screen and (min-width: 899px) {
+    .entete {
+      .logo_header {
+        img {
+          padding: 2% 0% 2% 0%;
+        }
+      }
 
-    div.restaurants_title {
+      .navigation {
+        .localisation {
+          padding: 2%;
+          font-size: 120%;
+        }
+
+        .explorer {
+          .texte_explorer {
+            padding-top: 2%;
+            p {
+              padding-bottom: 5%;
+            }
+          }
+
+          .bouton_explorer {
+            a {
+              padding: 1em;
+            }
+          }
+        }
+      }
+    }
+    body {
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    nav {
       h1 {
-        margin-left: 5%;
-        margin-bottom: 3%;
+        margin: 0 0 3% 3%;
         font-size: 200%;
       }
-    }
 
-    div.restaurants {
-      width: auto;
-      padding: 0 5%;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+      div.buttons_nav {
+        flex-direction: row;
 
-    div.restaurant {
-      width: 50%;
-      div.new {
-        padding: 1%;
-        margin: 1% 1% 0 47%;
-      }
-    }
-  }
+        .button_nav {
+          width: 40%;
 
-  footer {
-    .logo_footer {
-      padding: 5% 5% 2% 8%;
-      font-size: 200%;
-    }
+          p {
+            position: absolute;
+            margin-left: -1px;
+            color: white;
+            background-color: $first-color;
+            padding: 10px 15px;
+            border-radius: 20px;
+          }
 
-    .nav_foot {
-      ul {
-        li {
-          font-size: 120%;
-          i {
-            padding-right: 1%;
+          .button {
+            width: 20%;
           }
         }
       }
     }
-  }
 
-  header {
-    .elements_header {
-      padding: 2%;
-      justify-content: flex-start;
+    section.home {
+      padding: 4% 0;
 
-      .logo_header {
-        margin-left: 20%;
+      div.restaurants_title {
+        h1 {
+          margin-left: 5%;
+          margin-bottom: 3%;
+          font-size: 200%;
+        }
       }
-    }
-  }
 
-  section.menu {
-    .menus_title {
-      justify-content: space-between;
-      padding: 0 4%;
-
-      .menu_title {
-        font-size: 120%;
+      div.restaurants {
+        width: auto;
+        padding: 0 5%;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
-    }
 
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .pastille_all {
-        width: 33%;
+      div.restaurant {
+        width: 50%;
+        div.new {
+          padding: 1%;
+          margin: 1% 1% 0 47%;
+        }
       }
     }
 
-    .commander {
-      input {
-        padding: 20%;
-        font-size: 130%;
+    footer {
+      .logo_footer {
+        padding: 5% 5% 2% 8%;
+        font-size: 200%;
+      }
+
+      .nav_foot {
+        ul {
+          li {
+            font-size: 120%;
+            i {
+              padding-right: 1%;
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      .elements_header {
+        padding: 2%;
+        justify-content: flex-start;
+
+        .logo_header {
+          margin-left: 20%;
+        }
+      }
+    }
+
+    section.menu {
+      .menus_title {
+        justify-content: space-between;
+        padding: 0 4%;
+
+        .menu_title {
+          font-size: 120%;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .pastille_all {
+          width: 33%;
+        }
+      }
+
+      .commander {
+        input {
+          padding: 20%;
+          font-size: 130%;
+        }
       }
     }
   }

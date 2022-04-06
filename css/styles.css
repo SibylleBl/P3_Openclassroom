@@ -93,6 +93,7 @@ button {
   height: auto;
   align-items: center;
   text-align: center;
+  padding-bottom: 15%;
   background-color: #f8f6f6;
 }
 .entete .logo_header {
@@ -135,13 +136,17 @@ button {
 }
 .entete .navigation .explorer a {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  padding: 3%;
+  padding: 20px;
   border-radius: 30px;
   color: white;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
 }
 .entete .navigation .explorer a:hover {
   box-shadow: 4px 8px 15px 0px #575555;
+}
+.entete .navigation .explorer .bouton_explorer {
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -428,7 +433,7 @@ section.menu .commander {
 }
 section.menu .commander input {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  padding: 3%;
+  padding: 20px;
   border-radius: 30px;
   color: white;
   box-shadow: 4px 7px 10px 0px #9e9a9a;
@@ -544,10 +549,18 @@ footer li a {
   color: white;
 }
 
-@media only screen and (min-width: 899px) {
+@media only screen and (min-width: 768px) {
   .entete {
     padding-bottom: 5%;
   }
+  .entete .explorer .texte_explorer {
+    padding-top: 2%;
+  }
+  .entete .explorer .texte_explorer p {
+    padding-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 899px) {
   .entete .logo_header img {
     padding: 2% 0% 2% 0%;
   }

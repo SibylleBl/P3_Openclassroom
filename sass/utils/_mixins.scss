@@ -7,18 +7,15 @@
 
 @mixin shadow {
   box-shadow: 4px 7px 10px 0px $grey-color;
-   &:hover {
-     box-shadow: 4px 8px 15px 0px #575555;
-   }
+  &:hover {
+    box-shadow: 4px 8px 15px 0px #575555;
+  }
 }
 
 @mixin button {
   background: linear-gradient(to bottom right, $second-color, $first-color);
-  padding: 3%;
+  padding: 20px;
   border-radius: 30px;
   color: white;
   @include shadow;
 }
-
-
-
