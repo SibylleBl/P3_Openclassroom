@@ -12,8 +12,15 @@
   }
 }
 
-@mixin button {
+@mixin background_button {
   background: linear-gradient(to bottom right, $second-color, $first-color);
+  &:hover {
+    filter: brightness(110%);
+  }
+}
+
+@mixin button {
+  @include background_button;
   padding: 20px;
   border-radius: 30px;
   color: white;
